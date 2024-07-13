@@ -135,11 +135,6 @@ const ProductDetails = () => {
                       <Heart />
                     </div>
                   </div>
-                  <div className="flex">
-                    <p>Category</p>
-                    <ArrRight />
-                    <p>Rings</p>
-                  </div>
                 </div>
               </div>
             </>

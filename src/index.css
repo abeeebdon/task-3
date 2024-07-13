@@ -1,0 +1,46 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Serif', serif;
+}
+@layer components {
+  .btn-bg {
+    @apply bg-[#D19A64] hover:bg-[rgb(202,163,123)] text-white font-bold py-2;
+  }
+  .form-heading {
+    @apply text-[24px] leading-[31.8px];
+  }
+  .p-text2 {
+    @apply text-[24px] leading-[33.6px];
+  }
+  .p-text {
+    @apply md:text-[24px] md:leading-[31.8px];
+  }
+  .p-text3 {
+    @apply text-[12px] leading-[16px] text-black;
+  }
+  .price {
+    @apply text-[20px] leading-[26.5px] text-black;
+  }
+  .p-text4 {
+    @apply text-[16px] leading-[21.2px] text-black;
+  }
+  .input-container {
+    @apply flex items-center gap-2 border rounded-lg px-[2%] p-4;
+  }
+  .flex-custom {
+    @apply flex justify-between items-center;
+  }
+  .color-1 {
+    @apply text-[#D19A64];
+  }
+  .bg-1 {
+    @apply bg-[#D19A64];
+  }
+}

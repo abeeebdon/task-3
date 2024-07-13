@@ -7,7 +7,7 @@ const ProductCard = ({ data }) => {
 
   const navigate = useNavigate()
   const { id, name } = data
-  const price = data.current_price[0]?.USD?.[0]
+  const price = data.current_price[0]?.NGN?.[0]
   return (
     <div
       className="relative w-full max-w-[287px] h-[377px] rounded-lg mx-auto text-center "

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { ArrRight } from '../components/Icons'
 import { useContext } from 'react'
+import { AppContext } from '../context/AppContext'
 
 const Success = () => {
   const navigate = useNavigate()

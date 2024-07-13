@@ -88,7 +88,7 @@ const ProductDetails = () => {
           {product ? (
             <>
               <div className="flex p-2 gap-6 items-center h-full max-h-[472px]">
-                <div className="w-full h-full max-h-[471px] max-w-[436px]">
+                <div className="w-full  h-[400px] max-h-[471px] max-w-[436px]">
                   <img
                     src={imageUrl}
                     alt={product.src}
@@ -142,33 +142,33 @@ const ProductDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-8 p-4">
-                <div className="flex gap-4">
-                  {btnData.map((data) => {
-                    return (
-                      <div key={data.id}>
-                        <button
-                          className={
-                            data.id === num
-                              ? 'text-[#D19A64] price pt-serif-bold font-[700]'
-                              : 'price bg-white pt-serif-bold font-[700]'
-                          }
-                          onClick={() => handleBtn(data.id)}
-                        >
-                          {data.name}
-                        </button>
-                      </div>
-                    )
-                  })}
-                </div>
-                <div>
-                  <ProductInfo num={num} name={product.name} />
-                </div>
-              </div>
             </>
           ) : (
             <p>isLoading</p>
           )}
+        </div>
+        <div className="mt-8 p-4">
+          <div className="flex gap-4">
+            {btnData.map((data) => {
+              return (
+                <div key={data.id}>
+                  <button
+                    className={
+                      data.id === num
+                        ? 'text-[#D19A64] price pt-serif-bold font-[700]'
+                        : 'price bg-white pt-serif-bold font-[700]'
+                    }
+                    onClick={() => handleBtn(data.id)}
+                  >
+                    {data.name}
+                  </button>
+                </div>
+              )
+            })}
+          </div>
+          <div>
+            <ProductInfo num={num} name={product.name} />
+          </div>
         </div>
       </article>
     </section>

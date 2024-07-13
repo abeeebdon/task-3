@@ -22,7 +22,7 @@ const Products = () => {
             organization_id: '86f99e46e89448f8bfc7329f1f632b99',
             reverse_sort: false,
             page: page,
-            size: 10,
+            size: 12,
             Appid: '2WCV4TIWUYM91X4',
             Apikey: '2b8090be83b344b38db45841f125201420240713052139089722',
           },

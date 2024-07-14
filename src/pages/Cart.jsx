@@ -55,8 +55,8 @@ const Cart = () => {
       {cart.length > 0 ? (
         <>
           <article className="flex justify-between items-start flex-col md:flex-row gap-[7%]">
-            <div>
-              <div className="p-text pt-serif-bold grid grid-cols-4 w-full max-w-[700px] gap-6">
+            <div className="mx-auto">
+              <div className="p-text pt-serif-bold grid grid-cols-4 w-full max-w-[700px] xs:gap-6">
                 <h3 className="col-span-2">Product</h3>
                 <h3 className="col-span-1">Price</h3>
                 <h3 className="col-span-1">Quantity</h3>
@@ -68,9 +68,9 @@ const Cart = () => {
                   return (
                     <div
                       key={index}
-                      className="grid grid-cols-4 w-full max-w-[700px] gap-6 items-center mt-8"
+                      className="grid grid-cols-4 w-full max-w-[700px] xs:gap-6 items-center mt-8"
                     >
-                      <div className="col-span-2 flex items-center gap-2">
+                      <div className="col-span-2 xs:flex items-center gap-2">
                         <img
                           src={imageUrl}
                           className="w-[120px] h-[120px]"
@@ -83,7 +83,7 @@ const Cart = () => {
                           {`$${price}`}
                         </p>
                       </div>
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-4 flex-wrap">
                         <div className="border flex w-fit h-fit p-2 gap-2 text-[1rem] rounded-lg cursor-pointer">
                           <button
                             onClick={() => handleDecrease({ id, amount })}
@@ -125,7 +125,7 @@ const Cart = () => {
                 <hr />
                 <article className="flex justify-between items-center my-5">
                   <p>Grand Total</p>
-                  <p>{totalAmount ? totalAmount - 5.0 - 10.0 : 0}</p>
+                  <p>${totalAmount ? totalAmount - 5.0 - 10.0 : 0}</p>
                 </article>
                 <hr />
                 <div
@@ -139,7 +139,9 @@ const Cart = () => {
           </article>
         </>
       ) : (
-        <p>Your Cart is Empty</p>
+        <div className="flex justify-center text-[1.5rem]">
+          <p>Your Cart is Empty</p>
+        </div>
       )}
     </section>
   )

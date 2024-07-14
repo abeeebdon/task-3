@@ -174,14 +174,14 @@ const Checkout = () => {
                             <img
                               src={imageUrl}
                               alt={id}
-                              className="w-[120px] h-[140px]"
+                              className="w-[100px] h-[120px]"
                             />
                             <div>
                               <h3 className="pt-serif-bold text-[20px] leading-[26.5px]">
                                 {name}
                               </h3>
                               <p className="pt-serif-bold text-[24px] leading-[31.8px]">
-                                {price}
+                                ${price}
                               </p>
                             </div>
                           </div>
@@ -206,7 +206,7 @@ const Checkout = () => {
                       <hr />
                       <div className="flex justify-between items-center my-2">
                         <h3>Total</h3>
-                        <p>{totalAmount ? totalAmount - 5.0 - 10.0 : 0}</p>
+                        <p>${totalAmount ? totalAmount - 5.0 - 10.0 : 0}</p>
                       </div>
                     </div>
                   </section>

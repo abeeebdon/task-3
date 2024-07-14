@@ -37,7 +37,7 @@ const Products = () => {
   }, [page])
   return (
     <section>
-      <MenuHeading status={false} location="Products" />
+      <MenuHeading status={false} />
       <Section1 />
       <h2 className="my-8 p-text2 px-4 pt-serif-bold p-2">
         Choose from our varieties of products...

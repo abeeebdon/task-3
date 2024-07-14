@@ -5,7 +5,11 @@ import { AppContext } from '../context/AppContext'
 
 const Success = () => {
   const navigate = useNavigate()
-  const { totalAmount } = useContext(AppContext)
+  const { cart, setCart, totalAmount } = useContext(AppContext)
+  const handleHome = () => {
+    setCart([])
+    navigate('/')
+  }
   return (
     <section className="flex justify-center">
       <article className="w-full max-w-[640px] ">
@@ -58,7 +62,7 @@ const Success = () => {
         </div>
         <div
           className="btn-bg w-full  sm:w-[90%] mx-auto rounded-lg flex justify-center items-center mt-8"
-          onClick={() => navigate('/products')}
+          onClick={handleHome}
         >
           <button>Continue Shopping</button>
         </div>

@@ -6,6 +6,7 @@ import axios from 'axios'
 
 const Products = () => {
   const [products, setProducts] = useState([])
+  const [length, setLength] = useState('')
   const [page, setPage] = useState(1)
   const url = 'https://timbu-get-all-products.reavdev.workers.dev/'
   const handlePage = () => {
@@ -28,6 +29,7 @@ const Products = () => {
           },
         })
         setProducts(resp.data.items)
+        setLength(resp.data.total)
         console.log(resp)
       } catch (error) {
         console.log(error)
@@ -51,13 +53,18 @@ const Products = () => {
           )
         })}
       </div>
-      <div className="text-right mr-8">
-        <button
-          className="my-8 w-[197px] border-[#D19A64] rounded-lg font-bold text-[24px] p-4 border"
-          onClick={handlePage}
-        >
-          {page === 2 ? 'Previous Page' : 'Next Page'}
-        </button>
+      <div className="text-right mr-8 flex flex-col">
+        <p>
+          {products.length} of {length} Products
+        </p>
+        <div className="flex justify-end gap-4 text-white">
+          <p className="p-2 bg-1 rounded-full px-4" onClick={() => setPage(1)}>
+            1
+          </p>
+          <p className="p-2 bg-1 rounded-full px-4" onClick={() => setPage(2)}>
+            2
+          </p>
+        </div>
       </div>
     </section>
   )

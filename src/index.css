@@ -9,6 +9,9 @@ body {
   box-sizing: border-box;
   font-family: 'PT Serif', serif;
 }
+input:focus {
+  outline: none;
+}
 @layer components {
   .btn-bg {
     @apply bg-[#D19A64] hover:bg-[rgb(202,163,123)] text-white font-bold py-2;
@@ -42,5 +45,9 @@ body {
   }
   .bg-1 {
     @apply bg-[#D19A64];
+  }
+
+  .form-container {
+    @apply flex flex-col gap-2 my-3 border p-3 rounded-lg border-[#D19A64];
   }
 }

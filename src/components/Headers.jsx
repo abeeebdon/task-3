@@ -2,7 +2,6 @@ import { useContext, useState } from 'react'
 import useWindowSize from '../hooks/useWindowSize'
 import { CartIcon, MenuIcon, SearchIcon, UserIcon } from './Icons'
 import { NavLink, useNavigate } from 'react-router-dom'
-import Cart from '../pages/Cart'
 import { AppContext } from '../context/AppContext'
 
 const Headers = () => {

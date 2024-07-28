@@ -7,6 +7,7 @@ import Checkout from './pages/Checkout'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
 import { useEffect } from 'react'
+import Manager from './pages/Manager'
 
 const App = () => {
   const { pathname } = useLocation()
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/manager" element={<Manager />} />
           <Route path="*" element={<Missing />} />
         </Routes>
         <Footer />
